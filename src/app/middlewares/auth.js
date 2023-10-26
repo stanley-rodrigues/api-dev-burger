@@ -8,7 +8,7 @@ export default (req, res, next) => {
   }
 
   const token = authToken.split(' ')[1]
-  console.log(token)
+  // console.log(token)
 
   try {
     jwt.verify(token, authConfig.secret, function (err, decoded) {
