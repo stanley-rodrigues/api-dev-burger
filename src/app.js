@@ -6,9 +6,9 @@ import './database'
 class App {
   constructor() {
     this.app = express()
+    this.app.use(cors())
     this.middlewares()
     this.routes()
-    this.app.use(cors())
   }
 
   middlewares() {
