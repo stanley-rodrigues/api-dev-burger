@@ -1,20 +1,56 @@
-# Official Jenkins Docker image
+# Api hamburgueria 
 
-[![Docker Stars](https://img.shields.io/docker/stars/jenkins/jenkins.svg)](https://hub.docker.com/r/jenkins/jenkins/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/jenkins/jenkins.svg)](https://hub.docker.com/r/jenkins/jenkins/)
-[![Join the chat at https://gitter.im/jenkinsci/docker](https://badges.gitter.im/jenkinsci/docker.svg)](https://gitter.im/jenkinsci/docker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Projeto criado para gestão de uma hamburgueria onde o usuário pode se cadastrar e fazer seu pedido.O administrador pode adicionar e remover produtos,categorias, produtos em oferta e modificar pedido. 
 
-The Jenkins Continuous Integration and Delivery server [available on Docker Hub](https://hub.docker.com/r/jenkins/jenkins).
 
-This is a fully functional Jenkins server.
-[https://jenkins.io/](https://jenkins.io/).
 
 <img src="https://jenkins.io/sites/default/files/jenkins_logo.png"/>
 
-# Usage
+## Instalação
+Faça a instalação das seguintes ferramentas: 
+
+[Vscode](https://code.visualstudio.com/download)
+
+[Node.js](https://nodejs.org/en/download)
+
+[Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
+
+[Insomnia](https://insomnia.rest/download)
+
+[Docker](https://www.docker.com/products/docker-desktop/)
+
+[Postbird](https://github.com/Paxa/postbird/releases/tag/0.8.4)
+
+[MongoDB Compass](https://www.mongodb.com/try/download/atlascli)
+
+
+## Como usar
+
+Abra o vscode.
+abra um terminal e faça um clone do projeto.
+```
+git clone https://github.com/stanley-rodrigues/api-dev-burger.git
+```
+
+<img src="https://github.com/stanley-rodrigues/picForReadme/blob/main/api%20Devburguer/terminal.png"/>
+<img src="https://github.com/stanley-rodrigues/picForReadme/blob/main/api%20Devburguer/colar%20link%20api.png"/>
+
+Após fazer o clone ainda com o terminal aberto digite o comando "cd api-dev-burger" e prescione enter. 
+```
+cd api-dev-burger
+```
+Você irá acessar a pasta do projeto.No terminal dê o comando "yarn install" para baixar as dependências do projeto. 
+```
+yarn install
+```
+Após baixar as dependências do projeto, você precisará subir os container com os bancos postgres e mongoDB com os comandos no terminal:
 
 ```
-docker run -p 8080:8080 -p 50000:50000 --restart=on-failure jenkins/jenkins:lts-jdk17
+docker run --name codeburger-postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+```
+Depois o container do MongoDB
+```
+docker run --name codeburger-postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
 ```
 
 NOTE: read the section [_Connecting agents_](#connecting-agents) below for the role of the `50000` port mapping.
