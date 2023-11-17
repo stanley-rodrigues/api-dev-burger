@@ -25,19 +25,19 @@ Projeto criado para gestão de uma hamburgueria onde o usuário pode se cadastra
 ## Instalação
 Faça a instalação das seguintes ferramentas: 
 
-[Vscode](https://code.visualstudio.com/download){:target="_blank"}
+[Vscode](https://code.visualstudio.com/download)
 
-[Node.js](https://nodejs.org/en/download){:target="_blank"}
+[Node.js](https://nodejs.org/en/download)
 
-[Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable){:target="_blank"}
+[Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
 
-[Insomnia](https://insomnia.rest/download){:target="_blank"}
+[Insomnia](https://insomnia.rest/download)
 
-[Docker](https://www.docker.com/products/docker-desktop/){:target="_blank"}
+[Docker](https://www.docker.com/products/docker-desktop/)
 
-[Postbird](https://github.com/Paxa/postbird/releases/tag/0.8.4){:target="_blank"}
+[Postbird](https://github.com/Paxa/postbird/releases/tag/0.8.4)
 
-[MongoDB Compass](https://www.mongodb.com/try/download/atlascli){:target="_blank"}
+[MongoDB Compass](https://www.mongodb.com/try/download/atlascli)
 
 
 ##
