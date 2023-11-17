@@ -5,39 +5,39 @@ Projeto criado para gestão de uma hamburgueria onde o usuário pode se cadastra
 ## Índice 
 [Instalação](#Instalação)
 
-[Tecnologias utilizadas](###Tecnologias-utilizadas)
+[Tecnologias utilizadas](#Tecnologias-utilizadas)
 
-[Usuário admin logado](##Usuário-admin-logado)
+[Usuário admin logado](#Usuário-admin-logado)
 
-[Rota categorias](###Rota-categorias)
+[Rota categorias](#Rota-categorias)
 
-[Rota produtos](###Rota-produtos)
+[Rota produtos](#Rota-produtos)
 
-[Rota pedidos](###Rota-pedidos)
+[Rota pedidos](#Rota-pedidos)
 
-[Usuário cliente logado](##Usuário-cliente-logado)
+[Usuário cliente logado](#Usuário-cliente-logado)
 
-[Rota pedidos cliente](###Rota-pedidos-cliente)
+[Rota pedidos cliente](#Rota-pedidos-cliente)
 
-[Desenvolvedor](##desenvolvedor)
+[Desenvolvedor](#desenvolvedor)
 
 
 ## Instalação
 Faça a instalação das seguintes ferramentas: 
 
-[Vscode](https://code.visualstudio.com/download)
+[Vscode](https://code.visualstudio.com/download){:target="_blank"}
 
-[Node.js](https://nodejs.org/en/download)
+[Node.js](https://nodejs.org/en/download){:target="_blank"}
 
-[Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
+[Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable){:target="_blank"}
 
-[Insomnia](https://insomnia.rest/download)
+[Insomnia](https://insomnia.rest/download){:target="_blank"}
 
-[Docker](https://www.docker.com/products/docker-desktop/)
+[Docker](https://www.docker.com/products/docker-desktop/){:target="_blank"}
 
-[Postbird](https://github.com/Paxa/postbird/releases/tag/0.8.4)
+[Postbird](https://github.com/Paxa/postbird/releases/tag/0.8.4){:target="_blank"}
 
-[MongoDB Compass](https://www.mongodb.com/try/download/atlascli)
+[MongoDB Compass](https://www.mongodb.com/try/download/atlascli){:target="_blank"}
 
 
 ##
@@ -237,7 +237,7 @@ No campo Auth mude para bearer token e adicione o token gerado no login no campo
 <table>
   <tr>
     <td align="center">
-      <a href="https://www.linkedin.com/in/stanley-rodrigues/">
+      <a href="https://www.linkedin.com/in/stanley-rodrigues/" target="_blank">
         <img src="https://github.com/stanley-rodrigues/easy-shopping-pag-responsiva/blob/master/assets/eu.jpeg?raw=true" width="100px;" alt="Foto de Stanley Rodrigues"/><br>
         <sub>
           <b>Stanley Rodrigues</b>
