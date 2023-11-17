@@ -25,7 +25,7 @@ Projeto criado para gestão de uma hamburgueria onde o usuário pode se cadastra
 ## Instalação
 Faça a instalação das seguintes ferramentas: 
 
-[Vscode](https://code.visualstudio.com/download)
+[Vscode](https://code.visualstudio.com/download){:target="_blank"}
 
 [Node.js](https://nodejs.org/en/download)
 
