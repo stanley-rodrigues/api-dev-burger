@@ -4,8 +4,6 @@ Projeto criado para gestão de uma hamburgueria onde o usuário pode se cadastra
 
 
 
-<img src="https://jenkins.io/sites/default/files/jenkins_logo.png"/>
-
 ## Instalação
 Faça a instalação das seguintes ferramentas: 
 
@@ -24,7 +22,7 @@ Faça a instalação das seguintes ferramentas:
 [MongoDB Compass](https://www.mongodb.com/try/download/atlascli)
 
 
-## Como usar
+##
 
 Abra o vscode.
 abra um terminal e faça um clone do projeto.
@@ -50,8 +48,85 @@ docker run --name codeburger-postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432
 ```
 Depois o container do MongoDB
 ```
-docker run --name codeburger-postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres
+docker run --name mongo -p 27017:27017 -d -t mongo
 ```
+
+Após os dois contaneires criados abra o docker e dê start em ambos.
+
+<img src="https://github.com/stanley-rodrigues/picForReadme/blob/main/api%20Devburguer/Captura%20de%20Tela%202023-11-16%20%C3%A0s%2021.11.00.png"/>
+
+Retorne ao vscode e no terminal execute o comando:
+```
+yarn dev
+```
+
+# Como usar
+
+abra o insomnia crie uma rota POST e mande pelo body: name,email,password e admin sendo true(para criar um administrador) e false (para usuário cliente).Usando url
+```
+http://localhost:3001/users
+```
+
+<img src="https://github.com/stanley-rodrigues/picForReadme/blob/main/api%20Devburguer/user.png"/>
+
+### Usuário admin logado
+
+Crie uma rota POST e mande pelo body: email e password. Ao logar será gerado um token (guarde pois será utilizados nas demais rotas).Usando url.
+```
+http://localhost:3001/sessions
+```
+
+No campo Auth mude para bearer token e adicione o token gerado no login no campo de valor. E faça a requisição.
+
+<img src="https://github.com/stanley-rodrigues/picForReadme/blob/main/api%20Devburguer/login.png"/>
+
+### Rota categorias
+
+Crie uma rota POST e mude o body de json para multipart, mandando name e file (foto que representa sua categoria a ser criada).Usando url
+```
+http://localhost:3001/categories
+```
+No campo Auth mude para bearer token e adicione o token gerado no login no campo de valor. E faça a requisição.
+
+<img src="https://github.com/stanley-rodrigues/picForReadme/blob/main/api%20Devburguer/cria%20categoria.png"/>
+
+Para visualizar todas as categorias, crie uma rota GET Usando url
+```
+http://localhost:3001/categories
+```
+No campo Auth mude para bearer token e adicione o token gerado no login no campo de valor. E faça a requisição.
+
+Para editar alguma categoria, crie uma rota PUT Usando url e após a / adicione o id gerado na criação da categoria. Para buscar o id de uma categoria basta acessa a rota GET.Mude o body de json para multipart e mande name com o nome que você colocar com valor 
+```
+http://localhost:3001/categories/
+```
+No campo Auth mude para bearer token e adicione o token gerado no login no campo de valor. E faça a requisição.
+
+### Rota produtos
+
+Crie uma rota POST e mude o body de json para multipart, mandando name, price, category_id(id que é gerado a cada criação de uma categoria, escolha a que melhor representa seu produto) e file (foto que representa seu produto a ser criado).Usando url
+```
+http://localhost:3001/products
+```
+
+No campo Auth mude para bearer token e adicione o token gerado no login no campo de valor. E faça a requisição.
+
+<img src="https://github.com/stanley-rodrigues/picForReadme/blob/main/api%20Devburguer/produtos.png"/>
+
+Para visualizar todas os produtos, crie uma rota GET Usando url
+```
+http://localhost:3001/products
+```
+No campo Auth mude para bearer token e adicione o token gerado no login no campo de valor. E faça a requisição.
+
+Para editar algum produto, crie uma rota PUT Usando url e após a / adicione o id gerado na criação do produto. Para buscar o id de uma categoria basta acessa a rota GET.Mude o body de json para multipart e mande offer sendo true ou false(se desejar) name(se desejar) file(se desejar)
+```
+http://localhost:3001/products/
+```
+No campo Auth mude para bearer token e adicione o token gerado no login no campo de valor. E faça a requisição.
+
+<img src="https://github.com/stanley-rodrigues/picForReadme/blob/main/api%20Devburguer/editproduto.png"/>
+
 
 NOTE: read the section [_Connecting agents_](#connecting-agents) below for the role of the `50000` port mapping.
 
