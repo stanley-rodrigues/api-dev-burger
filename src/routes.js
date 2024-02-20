@@ -12,6 +12,10 @@ import authMiddleware from './app/middlewares/auth'
 const upload = multer(multerConfig)
 const routes = new Router()
 
+routes.get('/', (_, res) => {
+  return res.json({ message: 'Alive api!' })
+})
+
 routes.post('/users', UserController.store)
 routes.post('/sessions', SessionController.store)
 
