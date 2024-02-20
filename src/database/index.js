@@ -1,5 +1,5 @@
 import Sequelize from 'sequelize'
-import configDatabase from '../config/database'
+// import configDatabase from '../config/database'
 import User from '../app/models/User'
 import Product from '../app/models/Product'
 import Category from '../app/models/Category'
@@ -13,7 +13,9 @@ class Database {
   }
 
   init() {
-    this.connection = new Sequelize(configDatabase)
+    this.connection = new Sequelize(
+      'postgresql://postgres:Dd2Gd3G5EGe4aFbgGE4DB4BCDg12fA3g@roundhouse.proxy.rlwy.net:20866/railway',
+    )
     models
       .map((model) => model.init(this.connection))
       .map(
@@ -23,7 +25,7 @@ class Database {
 
   mongo() {
     this.mongoConnection = mongoose.connect(
-      'mongodb://localhost:27017/devburger',
+      'mongodb://mongo:Gg43BBfB-CcB23eCHCAHb2hbhEbhbE1-@viaduct.proxy.rlwy.net:56853',
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
